@@ -1,0 +1,19 @@
+server:
+  port: 8080
+
+spring:
+  cloud:
+    gateway:
+      routes:
+      - id: recruiterModule
+        uri: http://recruiter-service:8081/graphiql?path=/recruiter
+        predicates:
+        # - Path=/graphiql?path=/recruiter
+        - Path=/**
+
+logging:
+  level:
+    com:
+      netflix:
+        eureka: OFF
+        discovery: OFF
