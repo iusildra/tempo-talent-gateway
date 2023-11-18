@@ -10,6 +10,6 @@ spring:
         predicates:
         - Path=/recruiter
       - id: jobModule
-        uri: http://recruiter-service:8082/graphiql?path=
+        uri: http://job-service:8082/graphiql?path=
         predicates:
         - Path=/job
