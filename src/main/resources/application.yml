@@ -5,11 +5,10 @@ spring:
   cloud:
     gateway:
       routes:
-      - id: recruiterModule
-        uri: http://recruiter-service:8081/graphiql?path=/recruiter
+      - id: recruiter
+        uri: http://recruiter-service:8081
         predicates:
-        # - Path=/graphiql?path=/recruiter
-        - Path=/**
+        - Path=/recruiter
 
 logging:
   level:
