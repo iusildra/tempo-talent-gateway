@@ -13,3 +13,7 @@ spring:
         uri: http://job-service:8082/graphiql?path=
         predicates:
         - Path=/job
+      - id: kotlinLanding
+        uri: http://landing-service:8084/
+        predicates:
+        - Path=/
